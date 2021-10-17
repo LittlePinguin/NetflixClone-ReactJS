@@ -1,0 +1,30 @@
+.navbar {
+  background-color: aliceblue;
+  height: 50px;
+  display: flex;
+  text-align: center;
+  padding: 5px 20px 0 20px;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  font-style: oblique;
+}
+
+.navbar .logo span {
+  color: red;
+}
+
+.navbar .links {
+  margin-left: 60%;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar li {
+  margin-right: 30px;
+}

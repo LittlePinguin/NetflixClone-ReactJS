@@ -1,6 +1,10 @@
 .App {
   height: 100vh;
-  background-color: rebeccapurple;
+  background-color: rgb(27, 27, 46);
+}
+
+.App .container {
+  display: flex;
 }
 
 .App img {

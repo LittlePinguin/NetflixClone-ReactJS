@@ -1,0 +1,39 @@
+.trending {
+  margin-top: 30px;
+}
+
+.trending .carousel {
+  height: 300px;
+  width: 80%;
+  margin: auto;
+  background-color: rgb(255, 253, 162);
+  border: 2px solid rgb(192, 189, 17);
+  display: flex;
+}
+
+.trending .carousel .img-box {
+  height: 100%;
+  width: 100%;
+}
+
+.trending .carousel .img-box.one {
+  /* clip-path: polygon(0 0, 100% 0, 63% 100%, 0 100%); */
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 0%);
+}
+
+.trending .carousel .img-box.two {
+  margin-left: -85px;
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  /* clip-path: polygon(37% 0, 100% 0, 100% 100%, 0 100%); */
+}
+
+.trending .carousel .img-box.three {
+  margin-left: -85px;
+  clip-path: polygon(100% 0, 100% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+.trending .carousel .img-box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

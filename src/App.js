@@ -1,18 +1,20 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import Navbar from './components/Navbar';
+import Trending from './components/Trending'
 
 const API_KEY = "087a55e8903a9c161c9228f783a10ad4";
 const API = "https://api.themoviedb.org/3/";
-const MOVIE_API = "https://api.themoviedb.org/3/discover/movie?api_key=087a55e8903a9c161c9228f783a10ad4&page=1";
-const TV_API = `https://api.themoviedb.org/3/tv?api_key=${API_KEY}&language=en-US`;
-const API_TEST = "https://api.themoviedb.org/3/discover/tv?api_key=087a55e8903a9c161c9228f783a10ad4"
+const MOVIES = "https://api.themoviedb.org/3/discover/movie?api_key=087a55e8903a9c161c9228f783a10ad4&page=1";
+const TV = "https://api.themoviedb.org/3/discover/tv?api_key=087a55e8903a9c161c9228f783a10ad4"
 const IMAGES = "https://image.tmdb.org/t/p/original/";
+const TRENDING = `https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}`;
 
 function App() {
   const [tvShows, setTvShows] = useState([]);
 
   useEffect(() => {
-    fetch(API_TEST)
+    fetch(TV)
     .then(response => {
       return response.json();
     })
@@ -24,9 +26,11 @@ function App() {
 
   return (
     <div className="App">
-      {tvShows.map(tv => 
-        <div className="container">
-          <img src={`${IMAGES}${tv.poster_path}`} alt={tv.name}></img>
+      <Navbar></Navbar>
+      <Trending></Trending>
+      {tvShows.slice(0,5).map(tv => 
+        <div key={tv.id} className="container">
+          <img key={tv.id} src={`${IMAGES}${tv.poster_path}`} alt={tv.name}></img>
         </div>
       )}
     </div>
