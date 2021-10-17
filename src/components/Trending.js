@@ -23,7 +23,7 @@ function Trending() {
         <div className="trending">
             <div className="carousel">
                 <div className="img-box one">
-                    <img className="first" src={`${IMAGES}${trending[0].poster_path}`}></img>
+                    <img className="first" src={`${IMAGES}${trending[0].poster_path}`} alt={trending[0].name}></img>
                 </div>
                 <div className="img-box two">
                     <img className="second" src={`${IMAGES}${trending[1].poster_path}`}></img>

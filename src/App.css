@@ -1,13 +1,4 @@
 .App {
-  height: 100vh;
   background-color: rgb(27, 27, 46);
-}
-
-.App .container {
-  display: flex;
-}
-
-.App img {
-  height: 100px;
-  width: 100px;
+  overflow-x: auto;
 }

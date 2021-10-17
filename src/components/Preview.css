@@ -1,0 +1,54 @@
+.Preview {
+  background-color: rgb(27, 27, 46);
+  overflow-x: auto;
+}
+
+.Preview .container {
+  width: 80%;
+  margin: auto auto 50px auto;
+  color: white;
+  font-weight: bold;
+}
+
+.Preview .header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Preview .header .category {
+  background-color: rgb(192, 189, 17);
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+}
+
+.Preview .header .more {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.Preview .header .more .icon {
+  height: 10px;
+}
+
+.Preview .header .more:hover {
+  color: rgb(192, 189, 17);
+}
+
+.Preview .list {
+  display: flex;
+}
+
+.Preview .container img {
+  height: 200px;
+  width: 150px;
+  margin-right: 40px;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.Preview .container img:hover {
+  transform: scale(1.3);
+}
